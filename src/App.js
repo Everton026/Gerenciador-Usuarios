@@ -1,4 +1,6 @@
+import React from "react";
 import "./App.css"
+import Cadastro from "./Componentes/Cadastro";
 import Listagem from "./Componentes/Listagem"
 
 function App() {
@@ -20,30 +22,31 @@ function App() {
     // Contabiliza quantos itens tem dentro do array
     const qtdVacina = usuario.vacinasCovid19.length - 1
 
-    //console.log(usuario)
-    //console.log(usuario.endereco.rua, usuario.endereco.numero)
+    // console.log(usuario)
+    // console.log(usuario.endereco.rua, usuario.endereco.numero)
     // console.log(Object.keys(usuario))
     
     // Como usar um array com objetos dentro
-    const usuarios = [
+    const usuarios_padrao = [
         {nome: "Lores", status: false},
         {nome: "Arthur", status: true},
         {nome: "Zezin", status: true},
         {nome: "Kelvin", status: true}
     ]
 
-    console.log(usuarios)
+    
+     const [usuarios, setUsuarios] = React.useState(usuarios_padrao);
+
+    //console.log(usuarios)
 
   return (
     <div className="container">
     
-        <Listagem usuarios={usuarios}/>
-
         <div className="d-flex justify-content-around">
 
-            <div className="caixa">
-                <h2>Cadastro</h2>
-            </div>
+        <Listagem usuarios={usuarios}/>
+
+        <Cadastro usuarios={usuarios} setUsuarios={setUsuarios}/>
 
         </div>
         
