@@ -1,7 +1,9 @@
 import React from "react";
 import "./App.css"
 import Cadastro from "./Componentes/Cadastro";
-import Listagem from "./Componentes/Listagem"
+import Listagem from "./Componentes/Listagem";
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
 
@@ -28,13 +30,12 @@ function App() {
     
     // Como usar um array com objetos dentro
     const usuarios_padrao = [
-        {nome: "Lores", status: false},
-        {nome: "Arthur", status: true},
-        {nome: "Zezin", status: true},
-        {nome: "Kelvin", status: true}
+        {nome: "Lores", email:"lolis@gmail.com", status: false},
+        {nome: "Arthur", email:"arthurdoval@gmail.com", status: true},
+        {nome: "Zezin",  email:"ainzedamanga@gmail.com", status: true},
+        {nome: "Kelvin",  email:"kevinx@gmail.com", status: true}
     ]
 
-    
      const [usuarios, setUsuarios] = React.useState(usuarios_padrao);
 
     //console.log(usuarios)
@@ -42,11 +43,26 @@ function App() {
   return (
     <div className="container">
     
-        <div className="d-flex justify-content-around">
+                    <ToastContainer
+                        position="top-right"
+                        autoClose={5000}
+                        hideProgressBar={false}
+                        newestOnTop={false}
+                        closeOnClick
+                        rtl={false}
+                        pauseOnFocusLoss
+                        draggable
+                        pauseOnHover
+                        theme="dark"
+                    />
+
+        <div className="pai" >
 
         <Listagem usuarios={usuarios}/>
 
         <Cadastro usuarios={usuarios} setUsuarios={setUsuarios}/>
+
+        
 
         </div>
         

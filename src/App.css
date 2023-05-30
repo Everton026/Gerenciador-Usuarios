@@ -1,11 +1,87 @@
-.caixa{
-    color: #111;
-    box-shadow: 10px 10px 5px #555;
-    border: 1px solid #bdbdbd;
+@import url("https://fonts.googleapis.com/css2?family=Alkatra&display=swap");
+
+::-webkit-scrollbar{
+    width: 8px;
+}
+::-webkit-scrollbar-track{
+    background-color: #757575;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #101;
+}
+@keyframes entrada {
+    from {
+        opacity: 0;
+        transform: translateY(-400px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+body {
+    font-family: "Alkatra", cursive;
+    background-color: #222;
+    color: #bebebf;
+}
+.pai {
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+}
+.registro{
+    box-shadow: 4px 6px 10px #bdbdbd;
+    border: 2px solid #757575;
     width: 600px;
     padding: 20px;
-    margin-top: 50px;
+    margin-top: 15px;
+    animation: entrada 0.9s ease-in-out;
+    border-radius: 8px;
+    max-height: 750px;
+    display: flex;
+    flex-direction: column;
+}
+.registro h2{
+    text-align: center;
+    font-size: 46px;
+}
+.registro >div{
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    align-items: center;
+}
+.registro img{
+    width: 350px;
+    border-radius: 50%;
+    border: 5px solid transparent;
+    background: linear-gradient(#d39e33, #ed5636, #101) padding-box,
+    linear-gradient(260deg, #757575, #ed5636, #633bbc) border-box;
+}
+.caixa{
+    box-shadow: 4px 6px 10px #bdbdbd;
+    border: 2px solid #757575;
+    width: 600px;
+    padding: 10px;
+    margin-top: 15px;
     display: flex;
     flex-direction: column;
     gap: 12.5px;
+    animation: entrada 0.9s ease-in-out;
+    overflow-y: scroll;
+    max-height: 750px;
+    border-radius: 8px;
+}
+.caixa h2 {
+    text-align: center;
+    font-size: 46px;
+}
+.status {
+    border:2px solid #bdbdbd;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 3px;
+    font-size: 20px;
 }

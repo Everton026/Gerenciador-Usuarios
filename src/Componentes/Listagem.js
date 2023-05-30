@@ -6,9 +6,10 @@ function Listagem(props){
 
             {
                 props.usuarios.map(item => 
-                    <div style={{border:"2px solid #bdbdbd"}}>  
+                    <div className="status" key={item.nome}>  
                         <p>Nome: {item.nome}</p>
-                        <p>Status: {item.status == true ? "Ativo" : "Banido"}</p>
+                        <p>Email: {item.email}</p>
+                        <p>Status: {item.status == true ? "Ativo ✔" : "Banido ✖"}</p>
                     </div>
                 )
              
