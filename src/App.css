@@ -50,13 +50,20 @@ body {
     justify-content: center;
     flex: 1;
     align-items: center;
+    overflow: hidden;
 }
 .registro img{
     width: 350px;
+    height: auto;
+    object-fit: cover;
     border-radius: 50%;
     border: 5px solid transparent;
     background: linear-gradient(#d39e33, #ed5636, #101) padding-box,
     linear-gradient(260deg, #757575, #ed5636, #633bbc) border-box;
+    transition: 0.3s ease-in-out;
+}
+.registro img:hover{
+    transform: scale(1.1);
 }
 .caixa{
     box-shadow: 4px 6px 10px #bdbdbd;
@@ -84,4 +91,5 @@ body {
     gap: 2px;
     padding: 3px;
     font-size: 20px;
+    border-radius: 15px;
 }
