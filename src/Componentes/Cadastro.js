@@ -27,6 +27,7 @@ function Cadastro({usuarios, setUsuarios}) {
     function veriEmail(email){
         const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return re.test(email)
+    // if(email.indexOf("@") == -1 || email.length < 10 || email.indexOf (".") == -1)
     }
     function verifica(){
 
@@ -35,7 +36,7 @@ function Cadastro({usuarios, setUsuarios}) {
             return;
         }
         if(nome.length < 3){
-            toast('Não Aceitamos Nomes Com Menos de 3 Caracteres.')
+            toast('✖. Não Aceitamos Nomes Com Menos de 3 Caracteres.')
             return;
         }
         if(!email){
@@ -58,8 +59,8 @@ function Cadastro({usuarios, setUsuarios}) {
                         <label htmlFor="txtNome" className="form-label">Nome</label>
                     </div>
                     <div className="mb-3 form-floating">
-                        <input onChange={e=>setEmail(e.target.value)} className="form-control" id="txtNome" placeholder="None"/>
-                        <label htmlFor="txtNome" className="form-label">Email</label>
+                        <input onChange={e=>setEmail(e.target.value)} className="form-control" id="txtEmail" placeholder="None"/>
+                        <label htmlFor="txtEmail" className="form-label">E-mail</label>
                     </div>
                     <div className="mb-3 form-check">
                         <input checked={ativo} onChange={e=>setAtivo(e.target.checked)} type="checkbox" className="form-check-input" id="cboxStatus"/>
