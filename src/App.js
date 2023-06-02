@@ -59,7 +59,7 @@ function App() {
 
         <div className="pai" >
 
-            <Listagem usuarios={usuarios}/>
+            <Listagem usuarios={usuarios} setUsuarios={setUsuarios}/>
 
             <Cadastro usuarios={usuarios} setUsuarios={setUsuarios}/>
 

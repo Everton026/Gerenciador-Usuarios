@@ -69,7 +69,7 @@ function Cadastro({usuarios, setUsuarios}) {
                         <button type="submit" className="btn btn-primary">Salvar</button>
                 </form>
                     <div>
-                        <img src="./assets/logo.png" alt=""/>
+                        <img src="./assets/Mordecai.png" alt=""/>
                     </div>
             </div>
     )
