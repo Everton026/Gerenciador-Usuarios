@@ -37,7 +37,7 @@ body {
     margin-top: 30px;
     animation: entrada 0.9s ease-in-out;
     border-radius: 8px;
-    max-height: 950px;
+    max-height: 805px;
     display: flex;
     flex-direction: column;
 }
@@ -57,7 +57,7 @@ body {
     height: auto;
     object-fit: cover;
     border-radius: 50%;
-    border: 5px solid transparent;
+    border: 7.5px solid transparent;
     background: linear-gradient(#d39e33, #ed5636, #101) padding-box,
     linear-gradient(260deg, #757575, #ed5636, #633bbc) border-box;
     transition: 0.3s ease-in-out;
@@ -76,7 +76,7 @@ body {
     gap: 12.5px;
     animation: entrada 0.9s ease-in-out;
     overflow-y: scroll;
-    max-height: 800px;
+    max-height: 805px;
     border-radius: 8px;
 }
 .caixa h2 {

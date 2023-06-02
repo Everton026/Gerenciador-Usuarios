@@ -37,6 +37,7 @@ function App() {
     ]
 
      const [usuarios, setUsuarios] = React.useState(usuarios_padrao);
+     const [edita, setEdita] = React.useState(null);
 
     //console.log(usuarios)
 
@@ -59,9 +60,9 @@ function App() {
 
         <div className="pai" >
 
-            <Listagem usuarios={usuarios} setUsuarios={setUsuarios}/>
+            <Listagem usuarios={usuarios} setUsuarios={setUsuarios} setEdita={setEdita}/>
 
-            <Cadastro usuarios={usuarios} setUsuarios={setUsuarios}/>
+            <Cadastro usuarios={usuarios} setUsuarios={setUsuarios} edita={edita}/>
 
         </div>
         

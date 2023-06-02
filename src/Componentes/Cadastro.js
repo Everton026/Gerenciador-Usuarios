@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { toast } from 'react-toastify';
 
-function Cadastro({usuarios, setUsuarios}) {
+function Cadastro({usuarios, setUsuarios, edita}){
 
     const [nome, setNome] = useState("");
     const [email, setEmail] = useState("");
@@ -55,11 +55,11 @@ function Cadastro({usuarios, setUsuarios}) {
                 <h2>Cadastro</h2>
                  <form onSubmit={(e)=>salvar(e)}>
                     <div className="mb-3 form-floating">
-                        <input onChange={e=>setNome(e.target.value)} className="form-control" id="txtNome" placeholder="None"/>
+                        <input value={edita == null ? "" : edita.nome} onChange={e=>setNome(e.target.value)} className="form-control" id="txtNome" placeholder="None"/>
                         <label htmlFor="txtNome" className="form-label">Nome</label>
                     </div>
                     <div className="mb-3 form-floating">
-                        <input onChange={e=>setEmail(e.target.value)} className="form-control" id="txtEmail" placeholder="None"/>
+                        <input value={edita == null ? "" : edita.email} onChange={e=>setEmail(e.target.value)} className="form-control" id="txtEmail" placeholder="None"/>
                         <label htmlFor="txtEmail" className="form-label">E-mail</label>
                     </div>
                     <div className="mb-3 form-check">

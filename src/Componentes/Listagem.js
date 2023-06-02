@@ -4,6 +4,9 @@ function Listagem(props){
         const novos_usuarios = props.usuarios.filter(item => item.nome != usuario.nome)
         props.setUsuarios(novos_usuarios)
     }
+    function atualizar(usuario){
+        props.setEdita(usuario)
+    }
 
     return (
         <div className="caixa">
@@ -15,6 +18,7 @@ function Listagem(props){
                         <p>Nome: {item.nome}</p>
                         <p>Email: {item.email}</p>
                         <p>Status: {item.status == true ? "Ativo ✔" : "Banido ✖"}</p>
+                        <button onClick={()=> atualizar(item)} className="btn btn-outline-secondary">Atualizar</button>
                         <button onClick={()=> remover(item)} className="btn btn-outline-secondary"><i className="fa-solid fa-trash-can"></i></button>
                     </div>
                 )
