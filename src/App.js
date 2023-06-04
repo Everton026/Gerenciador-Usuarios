@@ -38,7 +38,7 @@ function App() {
 
      const [usuarios, setUsuarios] = React.useState(usuarios_padrao);
 
-     const [mostrarTelaEditarCadastro, setMostrarTelaEditarCadastro] = React.useState(false);
+     const [telaEdita, setTelaEdita] = React.useState(false);
 
 
     //console.log(usuarios)
@@ -64,8 +64,8 @@ function App() {
 
             <Listagem usuarios={usuarios} setUsuarios={setUsuarios}/>
 
-            {mostrarTelaEditarCadastro ? <Cadastro setMostrarTelaEditarCadastro={setMostrarTelaEditarCadastro} /> : <Cadastro usuarios={usuarios} setUsuarios={setUsuarios}
-            setMostrarTelaEditarCadastro={setMostrarTelaEditarCadastro} />}
+            {telaEdita ? <Cadastro setTelaEdita={setTelaEdita} /> : <Cadastro usuarios={usuarios} setUsuarios={setUsuarios}
+            setTelaEdita={setTelaEdita} />}
 
         </div>
         
