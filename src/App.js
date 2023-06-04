@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback } from "react";
 import "./App.css"
 import Cadastro from "./Componentes/Cadastro";
 import Listagem from "./Componentes/Listagem";
@@ -38,6 +38,9 @@ function App() {
 
      const [usuarios, setUsuarios] = React.useState(usuarios_padrao);
 
+     const [mostrarTelaEditarCadastro, setMostrarTelaEditarCadastro] = React.useState(false);
+
+
     //console.log(usuarios)
 
   return (
@@ -59,9 +62,10 @@ function App() {
 
         <div className="pai" >
 
-            <Listagem usuarios={usuarios}/>
+            <Listagem usuarios={usuarios} setUsuarios={setUsuarios}/>
 
-            <Cadastro usuarios={usuarios} setUsuarios={setUsuarios}/>
+            {mostrarTelaEditarCadastro ? <Cadastro setMostrarTelaEditarCadastro={setMostrarTelaEditarCadastro} /> : <Cadastro usuarios={usuarios} setUsuarios={setUsuarios}
+            setMostrarTelaEditarCadastro={setMostrarTelaEditarCadastro} />}
 
         </div>
         
