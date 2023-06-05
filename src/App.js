@@ -42,34 +42,26 @@ function App() {
     //console.log(usuarios)
 
   return (
-
     <div className="container">
-    
-                    <ToastContainer
-                        position="top-right"
-                        autoClose={5000}
-                        hideProgressBar={false}
-                        newestOnTop={false}
-                        closeOnClick
-                        rtl={false}
-                        pauseOnFocusLoss
-                        draggable
-                        pauseOnHover
-                        theme="dark"
-                    />
-
+        <ToastContainer
+            position="top-right" 
+            autoClose={5000}        
+            hideProgressBar={false}            
+            newestOnTop={false}            
+            closeOnClick 
+            rtl={false}                       
+            pauseOnFocusLoss            
+            draggable            
+            pauseOnHover            
+             theme="dark"           
+        />                                 
         <div className="pai" >
-
             <Listagem usuarios={usuarios} setUsuarios={setUsuarios} setEdita={setEdita}/>
-
             <Cadastro usuarios={usuarios} setUsuarios={setUsuarios} edita={edita}/>
-
         </div>
-        
     </div>
   );
 }
-
 
 
 export default App;
