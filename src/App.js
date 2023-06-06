@@ -4,6 +4,7 @@ import Cadastro from "./Componentes/Cadastro";
 import Listagem from "./Componentes/Listagem";
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
+import Atualizar from "./Componentes/Atualizar";
 
 function App() {
 
@@ -38,6 +39,7 @@ function App() {
 
      const [usuarios, setUsuarios] = React.useState(usuarios_padrao);
      const [edita, setEdita] = React.useState(null);
+     const [muda, setMuda] = React.useState(false)
 
     //console.log(usuarios)
 
@@ -54,9 +56,12 @@ function App() {
             draggable            
             pauseOnHover            
              theme="dark"           
-        />                                 
+        />                          
+               
         <div className="pai" >
-            <Listagem usuarios={usuarios} setUsuarios={setUsuarios} setEdita={setEdita}/>
+
+            <Atualizar muda={muda} setMuda={setMuda}/>
+            <Listagem usuarios={usuarios} setUsuarios={setUsuarios} setEdita={setEdita} setMuda={setMuda}/>
             <Cadastro usuarios={usuarios} setUsuarios={setUsuarios} edita={edita}/>
         </div>
     </div>

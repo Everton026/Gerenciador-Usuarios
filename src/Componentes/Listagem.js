@@ -6,6 +6,10 @@ function Listagem(props){
         const novos_usuarios = props.usuarios.filter(item => item.nome != usuario.nome)
         props.setUsuarios(novos_usuarios)
     }
+    function atualizar(usuario){
+        props.setEdita(usuario)
+        props.setMuda(false)
+    }
 
     return (
         <div className="caixa">
@@ -20,7 +24,7 @@ function Listagem(props){
                         
                         <div className="d-flex sts">
                             <button onClick={()=> remover(item)} className="btn btn-outline-secondary"><i className="fa-solid fa-trash-can flex-fill"></i></button>
-                            <button onClick={()=> props.setEdita(false)} className="btn btn-outline-secondary"><i className="fa-solid fa-user-pen flex-fill"></i></button>
+                            <button onClick={()=> atualizar(item) } className="btn btn-outline-secondary"><i className="fa-solid fa-user-pen flex-fill"></i></button>
                         </div>
 
                     </div>

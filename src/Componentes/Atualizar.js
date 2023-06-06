@@ -1,19 +1,18 @@
 import React from "react"
 import Listagem from "./Listagem";
 
-function Atualizar(){
+function Atualizar({props, muda, setMuda}){
   
-  const [edit, setEdita] = React.useState(false)
   
   return(
     <div>
       {
-        edit == false ?
+        muda == false ?
           <>
-          <button onClick={()=>setEdita(true)} >Voltar</button>
+          <button onClick={()=>props.setMuda(true)}>Voltar</button>
           </>
           :
-            <Listagem setEdita={setEdita}/>
+            <Listagem setMuda={setMuda}/>
       }
     </div>
   )
