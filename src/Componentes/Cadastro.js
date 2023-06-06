@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { toast } from 'react-toastify';
+import Atualizar from "./Atualizar";
 
 function Cadastro({usuarios, setUsuarios, edita}){
 
@@ -22,6 +23,7 @@ function Cadastro({usuarios, setUsuarios, edita}){
         if(verifica()){
             setUsuarios([...usuarios, usuario])
         }
+        <Atualizar nome={nome} setNome={setNome} email={email} setEmail={setEmail} ativo={ativo} setAtivo={setAtivo}/>
     }
 
     function veriEmail(email){

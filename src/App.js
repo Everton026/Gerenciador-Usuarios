@@ -66,7 +66,8 @@ function App() {
                     <Cadastro usuarios={usuarios} setUsuarios={setUsuarios} edita={edita}/>
                 </>
             )
-              : <Atualizar setMuda={setMuda} edita={edita} usuarios={usuarios} setUsuarios={setUsuarios}/> }
+              : <Atualizar setMuda={setMuda} edita={edita} usuarios={usuarios} setUsuarios={setUsuarios}/>  
+            }
            
             </div>
     

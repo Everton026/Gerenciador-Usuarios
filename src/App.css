@@ -101,4 +101,13 @@ body {
 }
 .edit{
     animation: entrada 0.4s;
+    margin-top: 30px;
+}
+.atua {
+    border: 2px solid #757575;
+    box-shadow: 4px 6px 10px #bdbdbd;
+    display: flex;
+    flex-direction: column;
+    gap: 12.5px;
+    border-radius: 8px;
 }
