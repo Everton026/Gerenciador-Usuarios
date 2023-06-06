@@ -7,7 +7,6 @@ function Listagem(props){
         props.setUsuarios(novos_usuarios)
     }
     function atualizar(usuario){
-        props.setEdita(usuario)
         props.setMuda(false)
     }
 

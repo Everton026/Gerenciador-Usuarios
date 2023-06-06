@@ -2,9 +2,9 @@ import React from "react";
 import "./App.css"
 import Cadastro from "./Componentes/Cadastro";
 import Listagem from "./Componentes/Listagem";
+import Atualizar from "./Componentes/Atualizar";    
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
-import Atualizar from "./Componentes/Atualizar";
 
 function App() {
 
@@ -40,7 +40,6 @@ function App() {
      const [usuarios, setUsuarios] = React.useState(usuarios_padrao);
      const [edita, setEdita] = React.useState(null);
      const [muda, setMuda] = React.useState(false)
-
     //console.log(usuarios)
 
   return (
@@ -55,15 +54,24 @@ function App() {
             pauseOnFocusLoss            
             draggable            
             pauseOnHover            
-             theme="dark"           
+            theme="dark"           
         />                          
                
-        <div className="pai" >
+            <div className="pai" >
 
-            <Atualizar muda={muda} setMuda={setMuda}/>
-            <Listagem usuarios={usuarios} setUsuarios={setUsuarios} setEdita={setEdita} setMuda={setMuda}/>
-            <Cadastro usuarios={usuarios} setUsuarios={setUsuarios} edita={edita}/>
-        </div>
+            {
+                muda == false ?
+                <>
+                </>
+                :
+                <Atualizar setMuda={setMuda} edita={edita}/>
+            }
+
+                <Listagem usuarios={usuarios} setUsuarios={setUsuarios} setEdita={setEdita} setMuda={setMuda}/>
+                <Cadastro usuarios={usuarios} setUsuarios={setUsuarios} edita={edita}/>
+            
+            </div>
+    
     </div>
   );
 }

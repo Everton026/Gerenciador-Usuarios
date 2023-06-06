@@ -1,19 +1,13 @@
 import React from "react"
-import Listagem from "./Listagem";
 
-function Atualizar({props, muda, setMuda}){
+
+function Atualizar(props){
+
   
   
   return(
     <div>
-      {
-        muda == false ?
-          <>
-          <button onClick={()=>props.setMuda(true)}>Voltar</button>
-          </>
-          :
-            <Listagem setMuda={setMuda}/>
-      }
+      <button onClick={()=>setMudar(false)}>Voltar</button>
     </div>
   )
 
