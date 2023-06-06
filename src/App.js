@@ -59,17 +59,15 @@ function App() {
                
             <div className="pai" >
 
-            {
-                muda == false ?
+            {!muda ? 
+            (
                 <>
+                    <Listagem usuarios={usuarios} setUsuarios={setUsuarios} setEdita={setEdita} setMuda={setMuda}/>
+                    <Cadastro usuarios={usuarios} setUsuarios={setUsuarios} edita={edita}/>
                 </>
-                :
-                <Atualizar setMuda={setMuda} edita={edita}/>
-            }
-
-                <Listagem usuarios={usuarios} setUsuarios={setUsuarios} setEdita={setEdita} setMuda={setMuda}/>
-                <Cadastro usuarios={usuarios} setUsuarios={setUsuarios} edita={edita}/>
-            
+            )
+              : <Atualizar setMuda={setMuda} edita={edita} usuarios={usuarios} setUsuarios={setUsuarios}/> }
+           
             </div>
     
     </div>

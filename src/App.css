@@ -99,3 +99,6 @@ body {
 .sts button {
     flex: 1;
 }
+.edit{
+    animation: entrada 0.4s;
+}
