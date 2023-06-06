@@ -37,7 +37,7 @@ body {
     margin-top: 30px;
     animation: entrada 0.9s ease-in-out;
     border-radius: 8px;
-    max-height: 805px;
+    max-height: 900px;
     display: flex;
     flex-direction: column;
 }
@@ -76,7 +76,7 @@ body {
     gap: 12.5px;
     animation: entrada 0.9s ease-in-out;
     overflow-y: scroll;
-    max-height: 805px;
+    max-height: 900px;
     border-radius: 8px;
 }
 .caixa h2 {
